@@ -1,0 +1,15 @@
+.output {
+    height: 30%;
+}
+
+.output p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.output-box {
+    background-color: white;
+    height: 100%;
+    padding: 16px
+}

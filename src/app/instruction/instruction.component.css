@@ -1,0 +1,145 @@
+.instructions {
+    height: 100%;
+}
+
+/* --------------------- */
+
+.intent-box {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.intent-box p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.intent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: white;
+    color: rgb(22, 155, 243);
+    font-weight: bold;
+}
+
+/* ---------------------- */
+.sentences-box {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sentences-box p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sentences {
+    padding: 24px 48px;
+    flex-grow: 1;
+    background-color: white;
+}
+
+.sentence {
+    margin-bottom: 8px;
+}
+
+/* -------------------- */
+
+.slots-box {
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slots {
+    padding: 24px;
+    flex-grow: 1;
+    background-color: white;
+}
+
+.slot {
+    margin-bottom: 8px;
+}
+
+.slots-box p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* --------------- */
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.buttons button {
+    width: 74px;
+    padding: 4px 8px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* ------------ */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    /* background-color: #dddddd; */
+}
+
+/* ------------------- */
+img {
+    width: 20px;
+    height: 20px;
+}
+
+
+ul {
+    list-style-type: square;
+}
+
+/* ----------- */
+
+.regex-box {
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.regex-box p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.regex {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    background-color: white;
+}

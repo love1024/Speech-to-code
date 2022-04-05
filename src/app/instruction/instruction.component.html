@@ -1,0 +1,44 @@
+<section class="instructions">
+    <div class="buttons">
+        <button [disabled]="current == 0" (click)="onPrevClick()">Previous</button>
+        <button [disabled]="current == data.length-1" (click)="onNextClick()">Next</button>
+    </div>
+    <div class="intent-box">
+        <p>Intent</p>
+        <div class="intent">{{data[current].intent}}</div>
+    </div>
+    <div class="slots-box">
+        <p>Slots</p>
+        <div class="slots">
+            <table>
+                <tr>
+                    <th>Slot</th>
+                    <th>Status</th>
+                    <th>Value</th>
+                    <th>Required</th>
+                </tr>
+                <tr *ngFor="let slot of data[current].slots">
+                    <td>{{slot.displayName}}</td>
+                    <!-- <td>{{slot.value ? "DONE" : "PENDING"}}</td> -->
+                    <td><img [src]="slot.value ? '/assets/images/correct.png' : '/assets/images/remove.png'" />
+                    </td>
+                    <td>{{slot.value ? slot.value: ""}}</td>
+                    <td>{{slot.optional ? "No" : "Yes"}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="regex-box">
+        <p>Regex</p>
+        <div class="regex">{{data[current].regex}}</div>
+    </div>
+    <div class="sentences-box">
+        <p>Sentences</p>
+        <ul class="sentences">
+            <li *ngFor="let sentence of data[current].sample" class="sentence">
+                {{sentence}}
+            </li>
+        </ul>
+    </div>
+</section>

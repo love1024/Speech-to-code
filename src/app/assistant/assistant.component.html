@@ -1,0 +1,28 @@
+<div class="playback">
+    <div *ngIf="listening$ | async; else mic">
+        <img src=" /assets/images/mic.png" (click)="stop()" />
+        <br />
+        <img src="/assets/images/listen2.gif" />
+    </div>
+</div>
+
+<ng-template #mic>
+    <img src="/assets/images/microphone.png" (click)="start()" />
+</ng-template>
+
+<span class="red" *ngIf="errorMessage$| async as errorMessage">{{errorMessage}}</span>
+
+<div class="transcript-box">
+    <p>Transcript</p>
+    <p class="transcript">{{transcript$ | async}}</p>
+</div>
+
+
+<div class="history-box">
+    <p>Dialog History</p>
+    <div class="history" id="history">
+        <p class="message" *ngFor="let h of history" [ngClass]="h.response ? 'response': ''">
+            {{h.message}}</p>
+    </div>
+    <!-- <textarea class="history" [value]="totalTranscript || ''" rows="15" disabled="true"></textarea> -->
+</div>
