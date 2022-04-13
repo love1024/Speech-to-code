@@ -40,6 +40,8 @@ export class InstructionComponent implements OnInit {
           const done = await this.checkForSlots(value, match);
           if (done) {
             let answer = value.response[this.getRandomInt(value.response.length)];
+            console.log(answer);
+            console.log(value.response);
             value.slots.forEach((i) => {
               answer = answer.replace(`{{${i.name}}}`, i.value);
             });
@@ -120,6 +122,7 @@ export class InstructionComponent implements OnInit {
     })
 
     if (nearest) {
+      this.appService.emitCompleteIntentEmitter(transcript);
       await spoken.say("Did you mean " + nearest, "Microsoft Zira - English (United States)");
       this.appService.emitResponse("Did you mean " + nearest);
       const sentence = await spoken.listen();
